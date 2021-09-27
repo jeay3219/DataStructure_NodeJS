@@ -2,11 +2,11 @@
 //JS PPT: https://drive.google.com/open?id=0BwN5VWV_C7-5ZnE3d045YWZJb00
 //Javascript 變數的使用
 
-var weight=50.5;
-var height=160;
-var bmi = weight/((height/100)**2);
+//var weight=50.5;
+//var height=160;
+//var bmi = weight/((height/100)**2);
 
-console.log("Hello! Your BMI value is "+ bmi);
+//console.log("Hello! Your BMI value is "+ bmi);
 
 //使用第三方套件 readline-sync (待使用者輸入資料後程式再繼續執行) 
 //NodeJS 套件管理程式為 npm，需打開終端機輸入指令
@@ -15,8 +15,33 @@ console.log("Hello! Your BMI value is "+ bmi);
 
 const readline = require('readline-sync');
 weight = readline.question('請輸入您的體重(kg)?');
+if(weight<=10)
+{
+    console.log("不合理");
+    return false;
+
+}
+if(weight>=200)
+{
+    console.log("不合理");
+    return false;
+
+}
+
 height = readline.question('請輸入您的身高(cm)?');  
+if(height>=220)
+{
+    console.log("不合理");
+    return false;
 
+}
+if(height<=50)
+{
+    console.log("不合理");
+    return false;
 
+}
+var bmi = weight/((height/100)**2);
+console.log("Hello! Your BMI value is "+ bmi);
 //not only bmi value, but also judgement
 //Ask user to input height only, is it workable?
