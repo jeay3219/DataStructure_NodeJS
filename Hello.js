@@ -14,16 +14,9 @@
 //另可透過package.json指定所有相關套件後 npm install 即可安裝所有套件
 
 const readline = require('readline-sync');
-weight = readline.question('請輸入您的體重(kg)?');
 height = readline.question('請輸入您的身高(cm)?');  
-weight=Number(weight)
 height=Number(height)
-if(isNaN(weight)||weight<=10||weight>=200)
-{
-    console.log("不合理，請填入正確數字");
-   
-}
-else if(isNaN(height)||height<=20||height>=300)
+if(isNaN(height)||height<=20||height>=300)
 {
     console.log("不合理，請填入正確數字");
    
@@ -31,8 +24,14 @@ else if(isNaN(height)||height<=20||height>=300)
 }
 else
 {
-    var bmi = weight/((height/100)**2);
-    console.log("Hello! Your BMI value is "+ bmi);
+    height=(height/100);
+    //當BMI18.5理想體重為?
+    var BMI18=18.5*height**2;
+    console.log("你的理想體重範圍為:"+ BMI18);
+    
+    //當BMI24理想體重為?
+    var BMI24=24*height**2;
+    console.log("你的理想體重範圍為:"+ BMI18+"~"+BMI24+"KG");
 }
 
 //not only bmi value, but also judgement
