@@ -27,8 +27,7 @@ else
     height=(height/100);
     //當BMI18.5理想體重為?
     var BMI18=18.5*height**2;
-    console.log("你的理想體重範圍為:"+ BMI18);
-    
+
     //當BMI24理想體重為?
     var BMI24=24*height**2;
     console.log("你的理想體重範圍為:"+ BMI18+"~"+BMI24+"KG");

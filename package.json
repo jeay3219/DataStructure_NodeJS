@@ -1,5 +1,5 @@
 {
-  "name": "exercuse1",
+  "name": "elevator2",
   "version": "0.0.1",
   "description": "datd struccture",
   "main": "Hello.js",
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/kfhwang/DataStructure_NodeJS.git"
   },
-  "author": "",
+  "author": "datd structure",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kfhwang/DataStructure_NodeJS/issues"
@@ -18,5 +18,10 @@
   "homepage": "https://github.com/kfhwang/DataStructure_NodeJS#readme",
   "dependencies": {
     "readline-sync": "^1.4.10"
-  }
+  },
+  "devDependencies": {},
+  "keywords": [
+    "datd",
+    "structure"
+  ]
 }
