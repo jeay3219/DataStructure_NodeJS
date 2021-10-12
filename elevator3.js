@@ -10,7 +10,10 @@ var floorName=["B3","B2","B1","1","2","2M","3","5","6","7","8"]
 var currentFloor = 5; //index value of floorName
 var targetFloor; //B2 -> index:1
 
+
+
 while(true){ //無窮迴圈
+
     //輸入欲達樓層
     targetFloor = readline.question('目前在'+floorName[currentFloor]+'樓。請問要去那一層樓?');
     //判斷樓層是否合理
@@ -21,16 +24,22 @@ while(true){ //無窮迴圈
     if(targetFloor<0){
        //console.log("請輸入介於"+floorName[bottom]+"到"+floorName[top]+"之間的樓層名稱!");
        console.log("請輸入介於"+floorName.toString()+"之間的樓層名稱!");
-       continue;
+       
+      
+       
     }
     if(targetFloor==currentFloor){
-        console.log("離開電梯");
-        break;
-    }else{
+        continue;console.log("謝謝搭乘...");
+        setTimeout(function(){
+            console.log("離開電梯");
+        },5000)//停5000秒1000為一秒
+
+    } else{
      //移動電梯至欲達樓層
      //currentFloor 移到 targetFloor
      if(targetFloor<currentFloor){ //down
         console.log("電梯往下...");
+       
         //改用 for(初始值; 條件判斷; 累加減){}
         while(targetFloor < currentFloor){
             //for(var i=currentFloor; i>targetFloor;i--){
@@ -43,6 +52,7 @@ while(true){ //無窮迴圈
         
      }else{//up
         console.log("電梯往上...");
+       
         //while(targetFloor > currentFloor){
         do{    
             currentFloor = currentFloor + 1;
@@ -50,6 +60,8 @@ while(true){ //無窮迴圈
             // currentFloor++;
             console.log("電梯在"+floorName[currentFloor]+"樓");
         }while(targetFloor > currentFloor);
+        
+    
      }
     }
 }
