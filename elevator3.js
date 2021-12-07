@@ -18,23 +18,28 @@ while(true){ //無窮迴圈
     targetFloor = readline.question('目前在'+floorName[currentFloor]+'樓。請問要去那一層樓?');
     //判斷樓層是否合理
     //從floorName.indexOf()取出索引值，若為-1代表無此樓層
-    targetFloor = targetFloor.toUpperCase();
+    targetFloor = targetFloor.toUpperCase();//小寫變成大寫
     targetFloor = floorName.indexOf(targetFloor); //轉成整數
     //if(isNaN(targetFloor) || targetFloor<bottom || targetFloor>top){
     if(targetFloor<0){
        //console.log("請輸入介於"+floorName[bottom]+"到"+floorName[top]+"之間的樓層名稱!");
-       console.log("請輸入介於"+floorName.toString()+"之間的樓層名稱!");
+       console.log("請輸入介於"+floorName.toString()+"之間的樓層名稱!");  //toString變成字串
        
       
        
     }
-    if(targetFloor==currentFloor){
-        continue;console.log("謝謝搭乘...");
-        setTimeout(function(){
-            console.log("離開電梯");
-        },5000)//停5000秒1000為一秒
+    if(targetFloor==currentFloor)
+{
+    console.log("謝謝您的搭乘");
+    setTimeout(function()
+    {
+        //要延遲執行的代碼塊
+        console.log("離開電梯");
+    }, 5000);
+    break; //強迫中斷
+}//判斷樓層是否合理
 
-    } else{
+     else{
      //移動電梯至欲達樓層
      //currentFloor 移到 targetFloor
      if(targetFloor<currentFloor){ //down
